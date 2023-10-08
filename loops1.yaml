@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  gather_fatcs: no
+  tasks:
+   - name: creating the users
+     user:
+      name: "{{items}}"
+     with_items:
+      - jyoti
+      - kumar
+...
